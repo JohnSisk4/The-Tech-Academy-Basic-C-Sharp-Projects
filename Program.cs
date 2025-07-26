@@ -1,56 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Text; // Required for using stringBuilder
 using System.Threading.Tasks;
 
-namespace ShippingQuoteBranchingAssignment
+namespace StringAssignment
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Greet the user with a welcome message
-            Console.WriteLine("Welcome to Package Express. Please follow the instructions below.");
 
-            // Prompt user for package weight
-            Console.WriteLine("Please enter the package weight:");
-            int weight = Convert.ToInt32(Console.ReadLine());
+            // PART 1: Concatenate three strings
+             string firstName = "John";
+             string middleName = "J.";
+             string lastName = "Sisk";
 
-            // Check if weight exceeds the limit
-            if (weight > 50)
-            {
-                Console.WriteLine("Package too heavy to be shipped via Package Express. Have a good day.");
-                return; // End program if too heavy
-            }
+            // Combine all three strings into a full name
+            string fullName = firstName + " " + middleName + " " + lastName;
+            Console.WriteLine("Full Name: " + fullName);
 
-            // Prompt user for package width
-            Console.WriteLine("Please enter the package width:");
-            int width = Convert.ToInt32(Console.ReadLine());
+            // PART 2: Convert a string to uppercase
+            string welcomeMessage = "Welcome to your C# console app!";
+            string uppercaseMessage = welcomeMessage.ToUpper(); // Convert message to uppercase
+            Console.WriteLine("Uppercase Message: " + uppercaseMessage);
 
-            // Prompt user for package height
-            Console.WriteLine("Please enter the package height:");
-            int height = Convert.ToInt32(Console.ReadLine());
+            // PART 3: Use StringBuilder to create a paragraph
+            StringBuilder paragraph = new StringBuilder(); // Initialize StringBuilder object
 
-            // Prompt user for package length
-            Console.WriteLine("Please enter the package length:");
-            int length = Convert.ToInt32(Console.ReadLine());
+            paragraph.Append("This is the first sentence in the paragraph. "); // Add first sentence
+            paragraph.Append("Now we add a second sentence to give it more body. "); // Second sentence
+            paragraph.Append("Finally, we wrap it up with a closing thought."); // Third sentence
 
-            // Check if the sum of dimensions exceeds the limit
-            int dimensionTotal = width + height + length;
-            if (dimensionTotal > 50)
-            {
-                Console.WriteLine("Package too big to be shipped via Package Express.");
-                return; // End program if too large
-            }
-
-            // Calculate the shipping quote
-            int volume = width * height * length;      // Calculate the volume of the package
-            decimal quote = (volume * weight) / 100m;  // Multiply volume by weight and divide by 100 (use decimal for currency)
-
-            // Display the final shipping quote to the user
-            Console.WriteLine("Your estimated total for shipping this package is: $" + quote.ToString("F2"));
-            Console.WriteLine("Thank you!");
+            Console.WriteLine("Paragraph using StringBuilder:");
+            Console.WriteLine(paragraph.ToString()); // Output the final paragraph
         }
     }
+
 }
