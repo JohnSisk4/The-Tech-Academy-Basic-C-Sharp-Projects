@@ -3,36 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 
-namespace InputAssignment
+namespace DateTimeAssignment
 {
     class Program
     {
-         static void Main(string[] args)
+        static void Main(string[] args)
+        
             {
+                // Print the current date and time to the console
+                // DateTime.Now retrieves the system's current local date and time
+                Console.WriteLine("Current date and time: " + DateTime.Now);
+
                 // Ask the user for a number
-                Console.Write("Please enter a number: ");
+                // This number will represent how many hours to add to the current time
+                Console.Write("\nEnter a number of hours to add: ");
+                string userInput = Console.ReadLine(); // Read the user's input as a string
 
-                // Read the user's input as a string
-                string userInput = Console.ReadLine();
+                // Convert the user's input into an integer
+                // int.Parse will throw an error if the input is not a valid number
+                int hoursToAdd = int.Parse(userInput);
 
-                // Define the file path where the number will be stored
-                // This creates a file named "numberLog.txt" in the same folder as the program
-                string filePath = "numberLog.txt";
+                // Calculate the future time by adding X hours to the current time
+                // DateTime.AddHours returns a new DateTime object with the added hours
+                DateTime futureTime = DateTime.Now.AddHours(hoursToAdd);
 
-                // Write the user's input to the text file
-                // File.WriteAllText creates the file if it doesn't exist, or overwrites it if it does
-                File.WriteAllText(filePath, userInput);
+                // Print the result to the console
+                Console.WriteLine("\nIn " + hoursToAdd + " hours, the time will be: " + futureTime);
 
-                // Read the contents of the text file back into a string
-                string fileContents = File.ReadAllText(filePath);
-
-                // Print the contents of the file back to the user
-                Console.WriteLine("\nThe number you entered was saved and read back from the file:");
-                Console.WriteLine(fileContents);
-
-                // Pause the console so the user can see the output before the window closes
+                // Pause the console so the user can read the output before the window closes
                 Console.WriteLine("\nPress any key to exit...");
                 Console.ReadKey();
             }
