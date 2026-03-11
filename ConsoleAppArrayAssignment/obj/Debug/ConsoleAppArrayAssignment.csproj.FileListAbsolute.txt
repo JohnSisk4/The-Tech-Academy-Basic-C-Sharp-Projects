@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\Basic_C#_Programs\ConsoleAppArray\ConsoleAppArrayAssignment\bin\Debug\ConsoleAppArrayAssignment.exe.config
+C:\Users\User\Desktop\Basic_C#_Programs\ConsoleAppArray\ConsoleAppArrayAssignment\bin\Debug\ConsoleAppArrayAssignment.exe
+C:\Users\User\Desktop\Basic_C#_Programs\ConsoleAppArray\ConsoleAppArrayAssignment\bin\Debug\ConsoleAppArrayAssignment.pdb
+C:\Users\User\Desktop\Basic_C#_Programs\ConsoleAppArray\ConsoleAppArrayAssignment\obj\Debug\ConsoleAppArrayAssignment.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Basic_C#_Programs\ConsoleAppArray\ConsoleAppArrayAssignment\obj\Debug\ConsoleAppArrayAssignment.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Basic_C#_Programs\ConsoleAppArray\ConsoleAppArrayAssignment\obj\Debug\ConsoleAppArrayAssignment.exe
+C:\Users\User\Desktop\Basic_C#_Programs\ConsoleAppArray\ConsoleAppArrayAssignment\obj\Debug\ConsoleAppArrayAssignment.pdb
